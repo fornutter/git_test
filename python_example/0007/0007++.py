@@ -46,15 +46,18 @@ if __name__ == "__main__":
     path="D:/git_test/python_example/0007"
 
     a=get_fixed_type_fileaname(path,"py") 
+
+    total=0
    
     for i in a:
         b=analyze_code(i)
+        total+=b[0]
         print("file name is "+i)
         print('code_line:',b[0])
         print('comment_line:',b[1])
         print('blank_line:',b[2])
         print("\n")
-
+    print(total)
 
 
 
